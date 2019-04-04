@@ -126,30 +126,11 @@ Portfolio scss elements
 }
 
 .card {
-  -webkit-box-shadow: 0 2px 3px 0 rgba(255, 255, 255, 0.2);
-          box-shadow: 0 2px 3px 0 rgba(255, 255, 255, 0.2);
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  border-radius: .3rem;
-}
-
-.card:hover {
-  -webkit-box-shadow: 0 8px 16px 0 rgba(150, 150, 150, 0.2);
-          box-shadow: 0 8px 16px 0 rgba(150, 150, 150, 0.2);
+  border: none !important;
 }
 
 .card a ._card-image {
   display: block;
-}
-
-.card a img {
-  max-width: 100%;
-  border-radius: 0 0 5px 5px;
-  height: auto;
-}
-
-.card ._card-details-container {
-  background-color: #ffffff;
 }
 
 .card ._card-details-container span {
@@ -166,7 +147,7 @@ Portfolio scss elements
 }
 
 .card ._card-details-container ._card-p {
-  color: rgba(51, 51, 46, 0.85);
+  color: rgba(51, 51, 46, 0.85) !important;
   text-transform: capitalize;
   font-size: 1em !important;
   margin-bottom: 0 !important;
@@ -179,7 +160,7 @@ Portfolio scss elements
 }
 
 footer div h3 {
-  color: #030301;
+  color: rgba(51, 51, 46, 0.85);
   font-size: 2em;
   font-family: "Anton", sans-serif;
 }
