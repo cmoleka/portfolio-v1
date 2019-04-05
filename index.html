@@ -1,170 +1,86 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: default
+permalink: /
+---
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"">
-    <meta http-equiv=" X-UA-Compatible" content="ie=edge">
-    <title>Carlo Moleka</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-</head>
-
-<body class="_body">
-    <div class="_bg-pat-one"></div>
-    <div class="_bg-pat-two"></div>
-    <!-- Site layout -->
-    <div class="container-fluid ">
-        <header class="row mt-2 align-items-center">
-            <div class="navbar-brand _logo d-inline-block align-top m-0"></div>
-            <div class="ml-2">
-                <h2 class="_branding m-0">Carlo Moleka</h2>
-                <h4 class="_social-at font-weight-bold m-0">@goldhatcarls</h4>
-            </div>
-            <div class="d-none d-md-block ml-auto pr-5">
-                <a href="#" class="nav-link _nav-list font-weight-bold d-inline ml-1">Github</a>
-                <a href="#" class="nav-link _nav-list font-weight-bold d-inline ml-1">Twitter</a>
-                <a href="#" class="nav-link _nav-list font-weight-bold d-inline ml-1">Linkdin</a>
-            </div>
-        </header>
-        <main class="row my-5 align-items-center">
-            <!-- <aside class="col-sm-3 d-none d-md-block">
-                <ul class="list-unstyled px-5">
-                    <li class="_menu-list py-2">
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li class="_menu-list py-2">
-                        <a href="projects.html">Projects</a>
-                    </li>
-                </ul>
-            </aside> -->
-            <main id="main-body" class="container">
-                <section class="row mx-auto my-2">
-                    <div class="col">
-                        <h1 class="mx-0">Welcome</h1>
-                        <h2 class="_index-page">Sit back and enjoy the ride.</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been
-                            the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                            galley
-                            of type and scrambled it to make a type specimen book.</p>
-                    </div>
-                </section>
-                <section class="row mx-auto mt-5">
-                    <div class="col">
-                        <div class="row">
-                            <!-- card -->
-                            <div class="col-sm-4 col-6">
-                                <div class="card mb-4">
-                                    <a href="#">
-                                        <img class="_card-image card-img-top" src="./img/bitcoin-1.jpg">
-                                    </a>
-                                    <div class="card-body _card-details-container p-1">
-                                        <span class="card-title ">Project title</span>
-                                        <p class="_card-p card-text">description goes in here okay?
-                                        </p>
-                                    </div>
+<div class="_bg-pat-one"></div>
+<div class="_bg-pat-two"></div>
+<!-- Site layout -->
+<div class="container-fluid ">
+    <header class="row mt-2 align-items-center">
+        <div class="navbar-brand _logo d-inline-block align-top m-0"></div>
+        <div class="ml-2">
+            <h2 class="_branding m-0">{{ site.author }}</h2>
+            <h4 class="_social-at font-weight-bold m-0">@{{ site.twitter_username }}</h4>
+        </div>
+        <div class="d-none d-md-block ml-auto pr-5">
+            <a href="https://github.com/cmoleka" class="nav-link _nav-list font-weight-bold d-inline ml-1">Github</a>
+            <a href="https://twitter.com/goldhatcarls"
+                class="nav-link _nav-list font-weight-bold d-inline ml-1">Twitter</a>
+            <a href="https://www.linkedin.com/in/carloitraws/"
+                class="nav-link _nav-list font-weight-bold d-inline ml-1">Linkdin</a>
+        </div>
+    </header>
+    <main class="row my-5 align-items-center">
+        <main id="main-body" class="container">
+            <section class="row mx-auto my-2">
+                <div class="col">
+                    <h1 class="mx-0">Welcome</h1>
+                    <h2 class="_index-page">Sit back and enjoy the ride.</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                        been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                        galley
+                        of type and scrambled it to make a type specimen book.</p>
+                </div>
+            </section>
+            <section class="row mx-auto mt-5">
+                <div class="col">
+                    <div class="row">
+                        <!-- card -->
+                        {% if site.data.projects %}
+                        {% for project in site.data.projects %}
+                        <div class="col-sm-4 col-6">
+                            <div class="card mb-4">
+                                <a href="{{ project.url }}">
+                                    <img class="_card-image card-img-top" src="{{ project.image }}">
+                                </a>
+                                <div class="card-body _card-details-container p-1">
+                                    <span class="card-title ">{{ project.name }}</span>
+                                    <p class="_card-p card-text">{{ project.description }}
+                                    </p>
                                 </div>
                             </div>
-                            <!-- card End-->
-                            <!-- card -->
-                            <div class="col-sm-4 col-6">
-                                <div class="card mb-4">
-                                    <a href="#">
-                                        <img class="_card-image card-img-top" src="./img/bitcoin-1.jpg">
-                                    </a>
-                                    <div class="card-body _card-details-container p-1">
-                                        <span class="card-title ">Project title</span>
-                                        <p class="_card-p card-text">description goes in here okay?
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- card End-->
-                            <!-- card -->
-                            <div class="col-sm-4 col-6">
-                                <div class="card mb-4">
-                                    <a href="#">
-                                        <img class="_card-image card-img-top" src="./img/bitcoin-1.jpg">
-                                    </a>
-                                    <div class="card-body _card-details-container p-1">
-                                        <span class="card-title ">Project title</span>
-                                        <p class="_card-p card-text">description goes in here okay?
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- card End-->
-                            <!-- card -->
-                            <div class="col-sm-4 col-6">
-                                <div class="card mb-4">
-                                    <a href="#">
-                                        <img class="_card-image card-img-top" src="./img/bitcoin-1.jpg">
-                                    </a>
-                                    <div class="card-body _card-details-container p-1">
-                                        <span class="card-title ">Project title</span>
-                                        <p class="_card-p card-text">description goes in here okay?
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- card End-->
-                            <!-- card -->
-                            <div class="col-sm-4 col-6">
-                                <div class="card mb-4">
-                                    <a href="#">
-                                        <img class="_card-image card-img-top" src="./img/bitcoin-1.jpg">
-                                    </a>
-                                    <div class="card-body _card-details-container p-1">
-                                        <span class="card-title ">Project title</span>
-                                        <p class="_card-p card-text">description goes in here okay?
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- card End-->
-                            <!-- card -->
-                            <div class="col-sm-4 col-6">
-                                <div class="card mb-4">
-                                    <a href="#">
-                                        <img class="_card-image card-img-top" src="./img/bitcoin-1.jpg">
-                                    </a>
-                                    <div class="card-body _card-details-container p-1">
-                                        <span class="card-title ">Project title</span>
-                                        <p class="_card-p card-text">description goes in here okay?
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- card End-->
                         </div>
+                        {% endfor %}
+                        {% endif %}
+                        <!-- card End-->
                     </div>
-                </section>
-            </main>
+                </div>
+            </section>
         </main>
-        <footer class="row mt-2 mb-4 align-items-top">
-            <div class="d-block d-sm-none mx-auto">
-                <h3 class="text-center">Get in touch</h3>
-                <a href="#" class="nav-link _nav-list font-weight-bold d-inline ml-1">Github</a>
-                <a href="#" class="nav-link _nav-list font-weight-bold d-inline ml-1">Twitter</a>
-                <a href="#" class="nav-link _nav-list font-weight-bold d-inline ml-1">Linkdin</a>
-            </div>
-        </footer>
-    </div>
-    <!-- Site layout End -->
+    </main>
+    <footer class="row mt-2 mb-4 align-items-top">
+        <div class="d-block d-sm-none mx-auto">
+            <h3 class="text-center">Get in touch</h3>
+            <a href="https://github.com/cmoleka" class="nav-link _nav-list font-weight-bold d-inline ml-1">Github</a>
+            <a href="https://twitter.com/goldhatcarls"
+                class="nav-link _nav-list font-weight-bold d-inline ml-1">Twitter</a>
+            <a href="https://www.linkedin.com/in/carloitraws/"
+                class="nav-link _nav-list font-weight-bold d-inline ml-1">Linkdin</a>
+        </div>
+    </footer>
+</div>
+<!-- Site layout End -->
 
 
-    <script src="js/index.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
-</body>
-
-</html>
+<script src="js/index.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+</script>
